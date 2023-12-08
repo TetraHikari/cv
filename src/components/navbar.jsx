@@ -17,11 +17,12 @@ export const navbar = () => {
 
   return (
     <div className='w-full'>
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
+      <nav className="container relative flex flex-row items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
         {/* <img src={logo} alt="logo" /> */}
         <Disclosure>
           {({ open }) => (
             <>
+            <div className='relative w-full justify-between'>
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                 <NavLink to='/'>
                   <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
@@ -31,7 +32,7 @@ export const navbar = () => {
                   <span>Portfolio</span>
                 </span>
                 </NavLink>
-            <div className='relative lg:'>
+
               <Disclosure.Button
                   aria-label="Toggle Menu"
                   className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700">
@@ -54,8 +55,9 @@ export const navbar = () => {
                     )}
                   </svg>
               </Disclosure.Button>
+              </div>
 
-              <Disclosure.Panel className="absolute z-10 flex flex-wrap w-full my-5 lg:hidden">
+              <Disclosure.Panel className="absolute z-10 flex flex-wrap w-full my-5 lg:hidden bg-white rounded-md shadow-md dark:bg-gray-800">
                   <>
                     {navigation.map((item, index) => (
                       <NavLink key={index} href="/" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
@@ -63,12 +65,21 @@ export const navbar = () => {
                       </NavLink>
                     ))}
                   </>
-                </Disclosure.Panel>
-                </div>
+              </Disclosure.Panel>
               </div>
             </>
           )}
         </Disclosure>
+
+        <div className="hidden lg:flex lg:items-center lg:w-auto">
+          <div className="flex flex-row items-center justify-center">
+            {navigation.map((item, index) => (
+              <NavLink key={index} href="/" className="px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none truncate">
+                  {item}
+              </NavLink>
+            ))}
+          </div>
+        </div>
         
       </nav>
 

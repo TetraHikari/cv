@@ -9,14 +9,15 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 export const App = () => {
   return (
+    <div className="App h-full">
     <Router>
-      <div className='App w-full overflow-hidden h-full' style={{backgroundImage: `url(${bgimg})`}}>
+      <div className='App w-full overflow-hidden h-full'>
         <div className={ `${styles.paddingX} ${styles.flexCenter}` }>
             <div className={`${styles.boxWidth}`}>
               <Navbar />
             </div>
         </div>
-      <div className='Content'>
+      <div className='Content h-full'>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
@@ -30,6 +31,7 @@ export const App = () => {
         </div> */}
       </div>
     </Router>
+    </div>
   )
 }
 

@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* set backgroud image */
+body {
+  background-image: url("./assets/bac.jpg");
+}
+
+
+
