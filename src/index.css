@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 /* set backgroud image */
-body {
-  background-image: url("./assets/bac.jpg");
-}
+/* body {
+  background-image: url("./assets/bac2.png");
+  
+} */
 
 
 
