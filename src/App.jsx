@@ -17,7 +17,7 @@ export const App = () => {
               <Navbar />
             </div>
         </div>
-      <div className='Content h-full'>
+      <div className='Content h-full flex justify-center'>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
