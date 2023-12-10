@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/logo.svg';
 import { Disclosure } from "@headlessui/react";
 import { NavLink } from 'react-router-dom';
@@ -7,17 +7,18 @@ import CloseIcon from '../assets/close-icon.svg';
 
 export const navbar = () => {
   const navigation = [
-    'Home',
-    'About Me',
-    'Education',
-    'Skills',
-    'Projects',
-    'Contact',
+    {name:'Home', path: '/'},
+    {name:'About Me', path: '/about-me'},
+    {name:'Education', path: '/education'},
+    {name:'Skills', path: '/skills'},
+    {name:'Projects', path: '/projects'},
+    {name:'Contact', path: '/contact'},
   ];
+
 
   return (
     <div className='w-full'>
-      <nav className="container relative flex flex-row items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
+      <nav className="container relative flex flex-row items-center justify-between p-8 mx-auto lg:justify-between xl:px-0 xxxs:max-sm:pr-0 xxxs:max-sm:pl-0">
         {/* <img src={logo} alt="logo" /> */}
         <Disclosure>
           {({ open }) => (
@@ -60,8 +61,9 @@ export const navbar = () => {
               <Disclosure.Panel className="absolute z-10 flex flex-wrap w-full my-5 lg:hidden bg-white rounded-md shadow-md dark:bg-gray-800">
                   <>
                     {navigation.map((item, index) => (
-                      <NavLink key={index} href="/" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
-                          {item}
+                      <NavLink key={index} to={item.path} className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none" >
+                          {item.name}
+
                       </NavLink>
                     ))}
                   </>
@@ -74,8 +76,8 @@ export const navbar = () => {
         <div className="hidden lg:flex lg:items-center lg:w-auto">
           <div className="flex flex-row items-center justify-center">
             {navigation.map((item, index) => (
-              <NavLink key={index} href="/" className="px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none truncate">
-                  {item}
+              <NavLink key={index} to={item.path} className="px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none truncate">
+                  {item.name}
               </NavLink>
             ))}
           </div>

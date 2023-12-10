@@ -46,6 +46,10 @@ module.exports = {
       lg: "1200px",
       xl: "1700px",
     },
+    transitionDuration: {
+      '300': '300ms',
+      '500': '500ms',
+    }
   },
   plugins: [],
 };
