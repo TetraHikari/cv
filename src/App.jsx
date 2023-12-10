@@ -17,7 +17,7 @@ export const App = () => {
               <Navbar />
             </div>
         </div>
-      <div className='Content h-full flex justify-center'>
+      <div className='Content h-full flex justify-center mx-10 xxxs:max-ss:mx-20'>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
