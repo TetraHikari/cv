@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { Navbar, Home , AboutMe, Projects, Contact, Education, Skills, AnimateRoutes } from './components';
+import { Navbar, Home , AboutMe, Projects, Contact, Education, Skills} from './components';
 import React from 'react'
 import styles from './style';
 import bgimg from './assets/bac.jpg';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
 
 
 export const App = () => {
