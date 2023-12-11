@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { Navbar, Home , AboutMe, Projects, Contact, Education, Skills} from './components';
+import { Navbar, Home , AboutMe, Projects, Contact, Education, Skills, AnimatedRoutes} from './components';
 import React from 'react'
 import styles from './style';
 import bgimg from './assets/bac.jpg';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 
 
@@ -21,14 +21,7 @@ export const App = () => {
             </div>
         </div>
       <div className='Content h-full flex justify-center mx-10 xxxs:max-ss:mx-20'>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-me" element={<AboutMe />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/skills" element={<Skills />} />
-        </Routes>
+        <AnimatedRoutes />
       </div>
       </div>
     </Router>

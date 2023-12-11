@@ -1,7 +1,9 @@
 import React from 'react';
+import FadeIn from 'react-fade-in';
 
 function Projects() {
     return (
+        <FadeIn delay="200">
         <div className="Projects">
         <div className="Projects-header">
             <h1>Projects</h1>
@@ -20,6 +22,7 @@ function Projects() {
             </ul>
         </div>
         </div>
+        </FadeIn>
     );
 }
 

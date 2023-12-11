@@ -1,10 +1,15 @@
 import React, {useState, useEffect} from "react";
 import FadeIn from 'react-fade-in';
+import { motion } from 'framer-motion';
 
 function Home() {
     
     return (
-        <div className="Home mt-10 w-max text">
+        <motion.div className="Home mt-10 w-max text"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0 }}>
             <FadeIn delay="200">
             <div className="flex-row w-fit mb-10 ">
                 <div className="flex justify-start animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-black pr-5 text-black font-bold xxxs:text-1xl sm:text-3xl md:text-4xl lg:text-5xl">HELLO, I'M PEERANAT PATARAKITTISOPOL</div>
@@ -16,7 +21,7 @@ function Home() {
                 Contacts
             </div>
             </FadeIn>
-        </div>
+        </motion.div>
     );
 }
 

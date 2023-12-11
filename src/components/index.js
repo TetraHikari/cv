@@ -5,6 +5,8 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Education from './Education';
 import Skills from './Skills';
+import AnimatedRoutes from './AnimatedRoutes';
 
 
-export { Navbar, Home , AboutMe, Projects, Contact, Education, Skills};
+
+export { Navbar, Home , AboutMe, Projects, Contact, Education, Skills, AnimatedRoutes};

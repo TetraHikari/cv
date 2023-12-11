@@ -1,9 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
+import FadeIn from 'react-fade-in';
 
 function AboutMe() {
     return (
-        <div className="AboutMe">
-        <div className="AboutMe-header">
+        <motion.div className="AboutMe"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0 }}
+        >
+        <FadeIn delay="200">
+        <div className="AboutMe-header ">
             <h1>About Me</h1>
         </div>
         <div className="AboutMe-content">
@@ -22,7 +30,8 @@ function AboutMe() {
             reading manga.
             </p>
         </div>
-        </div>
+        </FadeIn>
+        </motion.div>
     );
 }
 

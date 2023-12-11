@@ -1,8 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
+import FadeIn from 'react-fade-in';
 
 function Education() {
     return (
-        <div className="Education">
+        <motion.div className="Education"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0 }}>
+        <FadeIn delay="200">
         <div className="Education-header">
             <h1>Education</h1>
         </div>
@@ -18,7 +25,8 @@ function Education() {
             and Computer Science Magnet Program.
             </p>
         </div>
-        </div>
+        </FadeIn>
+        </motion.div>
     );
 }
 

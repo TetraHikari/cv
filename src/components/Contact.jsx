@@ -1,7 +1,9 @@
 import React from 'react';
+import FadeIn from 'react-fade-in';
 
 function Contact() {
     return (
+        <FadeIn delay="200">
         <div className="Contact">
         <div className="Contact-header">
             <h1>Contact</h1>
@@ -18,6 +20,7 @@ function Contact() {
             </ul>
         </div>
         </div>
+        </FadeIn>
     );
 }
 
