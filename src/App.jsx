@@ -5,6 +5,7 @@ import React from 'react'
 import styles from './style';
 import bgimg from './assets/bac.jpg';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import AnimateCursor from './components/AnimateCursor';
 
 
 
@@ -14,6 +15,7 @@ export const App = () => {
   return (
     <div className={`App h-full`}>
     <Router>
+      <AnimateCursor />
       <div className='App w-full overflow-hidden h-full'>
         <div className={ `${styles.paddingX} ${styles.flexCenter}` }>
             <div className={`${styles.boxWidth}`}>
