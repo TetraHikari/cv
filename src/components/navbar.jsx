@@ -8,10 +8,10 @@ import CloseIcon from '../assets/close-icon.svg';
 export const navbar = () => {
   const navigation = [
     {name:'Home', path: '/'},
-    {name:'About Me', path: '/about-me'},
+    // {name:'About Me', path: '/about-me'},
     {name:'Education', path: '/education'},
     {name:'Skills', path: '/skills'},
-    {name:'Projects', path: '/projects'},
+    // {name:'Projects', path: '/projects'},
     {name:'Contact', path: '/contact'},
   ];
 
@@ -27,16 +27,15 @@ export const navbar = () => {
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                 <NavLink to='/'>
                   <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
-                  <span>
-                    <img className='w-8' src={logo} alt="logo" />
+                  <span className='font-family:Lilita One text-black'>
+                    pplus
                   </span>
-                  <span>Portfolio</span>
                 </span>
                 </NavLink>
 
               <Disclosure.Button
                   aria-label="Toggle Menu"
-                  className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700">
+                  className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden dark:text-gray-300 dark:focus:bg-trueGray-700">
                   <svg
                     className="w-6 h-6 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -58,10 +57,10 @@ export const navbar = () => {
               </Disclosure.Button>
               </div>
 
-              <Disclosure.Panel className="absolute z-10 flex flex-wrap w-full my-5 lg:hidden bg-white rounded-md shadow-md dark:bg-gray-800">
+              <Disclosure.Panel className="absolute z-10 flex flex-wrap w-full my-5 lg:hidden bg-white rounded-md shadow-md p-5">
                   <>
                     {navigation.map((item, index) => (
-                      <NavLink key={index} to={item.path} className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none" >
+                      <NavLink key={index} to={item.path} className="w-full px-4 py-2 -ml-4 " >
                           {item.name}
 
                       </NavLink>
@@ -76,7 +75,7 @@ export const navbar = () => {
         <div className="hidden lg:flex lg:items-center lg:w-auto">
           <div className="flex flex-row items-center justify-center">
             {navigation.map((item, index) => (
-              <NavLink key={index} to={item.path} className="px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none truncate">
+              <NavLink key={index} to={item.path} className="px-4 py-2 hover:text-indigo-500 truncate">
                   {item.name}
               </NavLink>
             ))}

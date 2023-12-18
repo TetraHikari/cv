@@ -17,12 +17,12 @@ export const App = () => {
     <Router>
       <AnimateCursor />
       <div className='App w-full overflow-hidden h-full'>
-        <div className={ `${styles.paddingX} ${styles.flexCenter}` }>
+        <div className={ `${styles.paddingX} ${styles.flexCenter} sm:mb-20` }>
             <div className={`${styles.boxWidth}`}>
               <Navbar />
             </div>
         </div>
-      <div className='Content h-full flex justify-center mx-10 xxxs:max-ss:mx-20'>
+      <div className='Content h-full w-full flex xxxs:max-xxs:justify-start justify-center lg:items-start` pl-10 pr-10' >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-me" element={<AboutMe />} />
