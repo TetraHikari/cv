@@ -1,10 +1,13 @@
 {
+  "homepage": "https://TetraHikari.github.io/cv",
   "name": "newportfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -12,6 +15,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "framer-motion": "^10.16.16",
+    "gh-pages": "^6.1.0",
     "react": "^18.2.0",
     "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.2.0",
